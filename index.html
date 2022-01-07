@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<head>
-    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,127 +23,399 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-
-</head>
+  </head>
 <style>
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://i2.wp.com/appykids.com/wp-content/uploads/2019/07/Play-School-Hero-BG-scaled.jpg?ssl=1');
+  font-family: "Lato", sans-serif;
+  background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
 }
 
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5vw;
 }
 
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
+.sidenav a {
+  padding: 2vw 2vw 2vw 3vw;
   text-decoration: none;
+  font-size: 25px;
+  color: #818181;
   display: block;
-  text-align: left;
+  transition: 0.3s;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
+
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 </style>
 </head>
 <body>
 
-<div class="navbar">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div>
-    <a href="https://gokul2009.github.io/Vedu/"><img src="https://i1.wp.com/vedu.academy/wp-content/uploads/2020/06/Vedu-W.png?fit=466%2C277&ssl=1"width=70 height=40></a>
+    <a href="https://gokul2009.github.io/Vedu/"><img src="https://i1.wp.com/vedu.academy/wp-content/uploads/2020/06/Vedu-W.png?fit=466%2C277&ssl=1"width=90 height=60></a>
   </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="https://gokul2009.github.io/Vedu/">Home</a>
-  <a href="https://gokul2009.github.io/about/">about</a>
-  <div class="dropdown">
-    <button class="dropbtn">select classes 
-      <i class="fa fa-caret-down"></i>
-    </button>
-     <div class="dropdown-content">
-      <a href="https://gokul2009.github.io/class-2/">class 2</a>
-      <a href="https://gokul2009.github.io/class-3/">class 3</a>
-      <a href="https://gokul2009.github.io/class-4/">class 4</a>
-      <a href="https://gokul2009.github.io/class-5/">class 5</a>
-      <a href="https://gokul2009.github.io/class-6/">class 6</a>
-      <a href="https://gokul2009.github.io/class-7/">class 7</a>
-      <a href="https://gokul2009.github.io/class-8/">class 8</a>
-      <a href="https://student.geneo.in/geneo_live/student_landing.aspx?v=1.88#">live classes/notes/textbook/videos</a>
-    </div>
-  </div> 
+  <a href="https://gokul2009.github.io/about/">About</a>
+  <a href="https://gokul2009.github.io/contact/">Contact</a>
+  <a href="https://gokul2009.github.io/Select-classes/">Select classes</a>
+  <a href="https://play2048.co/">2048 maths game</a>
 </div>
-</body>
-<head>
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;<b>Vedu</b></span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
 }
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
 </body>
+
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
 </style>
+</head>
 <body>
-  <p style="font-size:30px""font-family:'Courier New'">class 6 Science playlist</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLVLoWQFkZbhXq3hjhx5TQMhL3lNiF_OLy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p style="font-size:30px""font-family:'Courier New'">maths playlist</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLVLoWQFkZbhXhyTmv71FsOx0MoMZOLelp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p style="font-size:30px""font-family:'Courier New'">english playlist</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLVLoWQFkZbhWen6L_Ss8IqxJs_zUFgxa-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</body>
-</html>
+
+<h2 style="font-size:6vw">Class 6</h2>
+
+<button class="accordion" style="font-size:3vw">SCIENCE</button>
+<div class="panel">
+  <button class="accordion" style="font-size:3vw">Biology- Food: Where Does it Come From?</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Biology- Food: Where Does it Come From?</p>
+  <iframe class="responsive-iframe"src="https://www.youtube.com/embed/5l5vyEpyp_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Biology- Components of Foo</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Biology- Components of Food</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/cQAWv4L4bgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chemistry- Fibre to Fabric</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chemistry- Fibre to Fabric</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/WuMLar3QoPU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chemistry- Sorting Materials into Groups</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chemistry- Sorting Materials into Groups</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/FhRIMy7bmmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chemistry- Separation of Substances</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chemistry- Separation of Substances</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/gmpS14CJFUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chemistry- Changes Around Us</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chemistry- Changes Around Us</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/4KYqxn1DalE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\
+</div>
+<button class="accordion" style="font-size:3vw">Biology- Getting to Know plants</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Biology- Getting to Know plants</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/P0q7CbNlxBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Biology- Body Movements</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Biology- Body Movements</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/qmcj6ZvHBjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Biology- The living organisms and their surrounding</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Biology- The living organisms and their surrounding</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/XpvnNrd6II4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Motion and Measurement of Distances</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Motion and Measurement of Distances</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/2iVvqELKRZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Physics- Light, Shadows and Reflections</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Physics- Light, Shadows and Reflections</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/3IhFqnoJyuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Physics- Electricity, and Circuits</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Physics- Electricity, and Circuits</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/vlotVbzrwxg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Physics- Fun With Magnets</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Physics- Fun With Magnets</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/UDupgqzQQ24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Biology- Water</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Biology- Water</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/xCRbdoYXWRg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Chemistry- Air Around Us</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Chemistry- Air Around Us</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Sfy1idq8Am0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Biology- Garbage In, Garbage Out</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Biology- Garbage In, Garbage Out</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ZVF-mwNZQls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  
+</div>
+
+<button class="accordion"style="font-size:3vw">MATHS</button>
+<div class="panel">
+  <button class="accordion" style="font-size:3vw">Knowing Our Numbers</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Knowing Our Numbers</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/j9jm3wFMBQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Whole Numbers</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Whole Numbers</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/JUeZwIM5aVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+  <button class="accordion" style="font-size:3vw">Playing with Number</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Playing with Numbers</p>
+  <iframe class="responsive-iframe"src="https://www.youtube.com/embed/zY_uLUKWLjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Basic Geometrical Ideas</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Basic Geometrical Ideas</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/mJ_RCCNuxjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Understanding Elementary Shapes</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Understanding Elementary Shapes</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KPVODrQPIBA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Integers</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Integers</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BVVrp7WkcCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Fractions</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Fractions</p>
+  <iframe class="responsive-text" src="https://www.youtube.com/embed/eb0hQeMHD0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Decimals</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Decimals</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/m0aNbQi2uzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Data Handling</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Data Handling</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/CAFIgO4_jNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Mensuration</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Mensuration</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/j-F6Lpa3M9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Algebra</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Algebra</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/oFA1lZiESx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Ratio and Proportion</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Ratio and Proportion</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/3pnVuX0fdDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Symmetry</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Symmetry</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MtqtIiJsfiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Practical Geometry</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Practical Geometry</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/mnFwAJ_TPeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<button class="accordion"style="font-size:3vw">ENGLISH</button>
+<div class="panel">
+  <button class="accordion" style="font-size:3vw">Who Did Patrick’s Homework?</button>
+<div class="panel">
+<p class="responsive-text" style="font-size:5vw;"> Who Did Patrick’s Homework?</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Enog8296Ukk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">A House, A Home</button>
+<div class="panel">
+<p class="responsive-text" style="font-size:5vw;">A House, A Home</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/D22ApjYFvig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">How the Dog Found Himself a New Master</button>
+<div class="panel">
+<p class="responsive-text" style="font-size:5vw;">How the Dog Found Himself a New Master!</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ntO1INsp4o4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Kite</button>
+<div class="panel">
+<p class="responsive-text" style="font-size:5vw;">The Kite</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/bciUcOaepg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Taro’s Reward</button>
+<div class="panel">
+<p class="responsive-text" style="font-size:5vw;"> Taro’s Reward</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/E4RfqFIlQrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Quarrel</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">The Quarrel</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/q0CrzOXHrhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">An Indian – American Woman in Space: Kalpana Chawla</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">An Indian – American Woman in Space: Kalpana Chawla</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/haCaXXrcWnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Beauty</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Beauty</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/FPrGfFQzN1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">A Different Kind of School</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">A Different Kind of School</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/nQF7zLUMkSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Where Do All the Teachers Go?</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Where Do All the Teachers Go?</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Ep0an-xaSs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Who I Am</button>
+<div class="panel">
+  <p class="responsive-text" style="font-size:5vw;">Who I Am</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/3VO41rBoO0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Wonderful Words</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">The Wonderful Words</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/hnvtPqb488U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Fair Play</button>
+<div class="panel">
+<p class="responsive-text" style="font-size:5vw;">Fair Play</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/xl9MRqsTALw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw"> A Game of Chance</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;"> A Game of Chance</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Sq3XePsNHUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Vocation</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Vocation</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/gkVfmFvxWds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">Desert Animals</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">Desert Animals</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/yHY5dw8RFAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">What if</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;">What if</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/nQF7zLUMkSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<button class="accordion" style="font-size:3vw">The Banyan Tree</button>
+<div class="panel">
+ <p class="responsive-text" style="font-size:5vw;"> The Banyan Tree</p>
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MgiiA-2HGno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+<script>
+  var myLandbot = new Landbot.Livechat({
+    configUrl: 'https://chats.landbot.io/v3/H-1087396-E4QEW9JDTUZ4R0FM/index.json',
+  });
+</script>
+</html> 
